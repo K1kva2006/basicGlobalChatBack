@@ -5,8 +5,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://basicglobalchat.netlify.app/',
-  credentials: true,
+  origin: 'https://basicglobalchat.netlify.app',
 }));
 app.use(express.json());
 
