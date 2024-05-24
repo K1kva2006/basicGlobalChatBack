@@ -4,7 +4,9 @@ const { MongoClient, ObjectId } = require("mongodb");
 require("dotenv").config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://basicglobalchat.netlify.app'
+}));
 app.use(express.json());
 
 const client = new MongoClient(process.env.CONNECTION_STRING);
